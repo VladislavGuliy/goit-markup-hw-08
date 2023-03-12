@@ -1,0 +1,28 @@
+.footer {
+    background-color: var(--secondary-background-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer__logo {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.footer__social-media {
+    margin-left: 70px;
+}
+.footer__mailing {
+    margin-left: 93px;
+}
+.footer__text {
+    display: inline-flex;
+    margin-bottom: 20px;
+  
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+  
+    color: var(--primary-white-color);
+}
+  

@@ -1,0 +1,9 @@
+@mixin color-icon($color){
+    fill: $color;
+}
+
+@mixin centred-flex($type: flex, $align: center, $content: center) {
+    display: $type;
+    align-items: $align;
+    justify-content: $content;
+}

@@ -1,0 +1,17 @@
+.logo {
+    color: var(--accent-color);
+  
+    font-family: var(--secondary-font);
+    font-size: 26px;
+    line-height: 1.19;
+    text-decoration: none;
+}
+.logo__item {
+    color: var(--black-color);
+    
+    &--color-white {
+      color: var(--primary-white-color);
+    }
+
+}
+  

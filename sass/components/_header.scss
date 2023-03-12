@@ -1,0 +1,27 @@
+.header {
+    border-bottom: 1px solid #ececec;
+}
+.header__contact {
+    @extend %list;
+    @extend %font;
+}
+.header__contact-item:last-child {
+    margin-left: 30px;
+}
+.header__contact-icon-wrapper {
+    vertical-align: text-bottom;
+    margin-right: 10px;
+    font-size: 0;
+}
+.header__contact-icon {
+    @include color-icon(currentColor);
+}
+.header__contact-link {
+    @extend %link;
+    
+    padding-top: 32px;
+    padding-bottom: 32px;
+  
+    color: var(--primary-text-color);
+}
+  

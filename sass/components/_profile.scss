@@ -1,0 +1,32 @@
+.profile {
+    display: flex;
+    @extend %list;
+  }
+  .profile__item {
+    position: relative;
+    width: calc((100% - 60px) / 3);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  .profile__background-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  
+    display: inline-block;
+    width: 100%;
+    background-color: rgba(47, 48, 58, 0.8);
+    text-align: center;
+  }
+  .profile__text {
+    margin: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    color: var(--primary-white-color);
+  
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+  }
