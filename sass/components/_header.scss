@@ -1,27 +1,84 @@
 .header {
+    position: relative;
     border-bottom: 1px solid #ececec;
 }
-.header__contact {
-    @extend %list;
-    @extend %font;
+
+@media screen and (max-width: 767px){
+    .header {
+        padding-top: 10px;
+        padding-bottom: 10px; 
+    }
+
+    .header__contact {
+        display: none;
+    }
 }
-.header__contact-item:last-child {
-    margin-left: 30px;
-}
-.header__contact-icon-wrapper {
-    vertical-align: text-bottom;
-    margin-right: 10px;
-    font-size: 0;
-}
-.header__contact-icon {
-    @include color-icon(currentColor);
-}
-.header__contact-link {
-    @extend %link;
+
+@media screen and (min-width: 768px) {
     
-    padding-top: 32px;
-    padding-bottom: 32px;
+    .header__contact {
+        @include font(block);
+        @include list();
+        }
+    
+    .header__contact-icon-wrapper {
+        vertical-align: text-bottom;
+        margin-right: 8px;
+        font-size: 0;
+        }
+    .header__contact-icon {
+        @include color-icon(currentColor);
+        }
+    .header__contact-link {
+        @include link();
   
-    color: var(--primary-text-color);
+        color: var(--primary-text-color);
+    }
+
+    
 }
+
+@media screen and (max-width: 1199px) {
+    .header__contact-item:first-child {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header__contact {
+        display: flex;
+    }
+
+    .header__contact-item:last-child {
+        margin-left: 40px;
+    }
+}
+
+// .header__logo {
+//     padding: 16px 0;
+// }
+// .header__contact {
+//     @extend %list;
+//     @extend %font;
+//     // display: none;
+// }
+// .header__contact-item:last-child {
+//     margin-left: 40px;
+// }
+// .header__contact-icon-wrapper {
+//     vertical-align: text-bottom;
+//     margin-right: 10px;
+//     font-size: 0;
+// }
+// .header__contact-icon {
+//     @include color-icon(currentColor);
+// }
+// .header__contact-link {
+//     @extend %link;
+    
+//     padding-top: 32px;
+//     padding-bottom: 32px;
+  
+//     color: var(--primary-text-color);
+// }
   

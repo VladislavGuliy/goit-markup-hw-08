@@ -1,6 +1,7 @@
 .profile {
     display: flex;
     @extend %list;
+    
   }
   .profile__item {
     position: relative;

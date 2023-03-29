@@ -1,0 +1,20 @@
+.wrapper-logo-address {
+    margin-bottom: 60px;
+    text-align: center;
+}
+@media screen and (max-width: 767px) {
+    .wrapper-logo-address {
+        flex: 1 100%;
+    }
+}
+@media screen and (min-width: 768px) {
+    .wrapper-logo-address {
+        flex: 1 auto;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .wrapper-logo-address {
+        margin-bottom: 0;
+        text-align: left;
+    }
+}

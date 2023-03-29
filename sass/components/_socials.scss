@@ -2,6 +2,12 @@
     @include centred-flex();
     @extend %list;
     line-height: 0;
+    
+    &--align-left {
+      @media screen and (min-width: 1200px) {
+          justify-content: left;;
+      }
+    }
 }
 .socials__item {
     margin-right: 10px;

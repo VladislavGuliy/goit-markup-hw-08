@@ -23,20 +23,32 @@
     <header class="header">
       <div class="container container--header-flex">
         <nav class="navigation">
-          <a href="./index.html" class="logo"
+          <a href="./index.html" class="logo header__logo"
             >Web<span class="logo__item">Studio</span></a
           >
 
           <ul class="nav-list">
             <li class="nav-list__item">
-              <a href="./index.html" class="nav-list__link nav-list__link--current">Студія</a>
+              <a
+                href="./index.html"
+                class="nav-list__link nav-list__link--current"
+                >Студія</a
+              >
             </li>
             <li class="nav-list__item">
               <a href="./portfolio.html" class="nav-list__link">Портфоліо</a>
             </li>
-            <li class="nav-list__item"><a href="" class="nav-list__link">Контакти</a></li>
+            <li class="nav-list__item">
+              <a href="" class="nav-list__link">Контакти</a>
+            </li>
           </ul>
         </nav>
+
+        <button type="button" class="mobile-button" data-menu-open>
+          <svg class="mobile-button__icon" width="40" height="40">
+            <use href="./images/icons.svg#burger-menu-icon"></use>
+          </svg>
+        </button>
 
         <ul class="header__contact">
           <li class="header__contact-item">
@@ -59,6 +71,63 @@
           </li>
         </ul>
       </div>
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu__container">
+          <button
+            type="button"
+            class="mobile-button mobile-menu__mobile-button-close"
+            data-menu-close
+          >
+            <svg class="mobile-menu__close-icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-close-mobile"></use>
+            </svg>
+          </button>
+
+          <ul class="mobile-menu__nav">
+            <li class="mobile-menu__nav-item">
+              <a class="mobile-menu__nav-link" href="./index.html">Студія</a>
+            </li>
+            <li class="mobile-menu__nav-item">
+              <a class="mobile-menu__nav-link" href="./portfolio.html"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="mobile-menu__nav-item">
+              <a class="mobile-menu__nav-link" href="">Контакти</a>
+            </li>
+          </ul>
+
+          <ul class="mobile-menu__contact">
+            <li class="mobile-menu__contact-item">
+              <a class="mobile-menu__contact-link" href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-menu__contact-item">
+              <a
+                class="mobile-menu__contact-link"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="mobile-menu__socials">
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="">Instagram</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="">Twitter</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="">Facebook</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -67,12 +136,16 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="button hero__button button--curiousblue-color" data-modal-open>
+          <button
+            type="button"
+            class="button hero__button button--curiousblue-color"
+            data-modal-open
+          >
             Замовити послугу
           </button>
         </div>
 
-        <!-- Модальне вікно  -->
+        <!-- Модальне вікно -->
 
         <div class="backdrop backdrop--is-hidden" data-modal>
           <div class="modal">
@@ -151,9 +224,12 @@
                 />
 
                 <label for="policy" class="modal-form__checkbox-label">
-                  
                   <span class="modal-form__checkbox-icon">
-                    <svg class="modal-form__icon-policy-check" width="16" height="16">
+                    <svg
+                      class="modal-form__icon-policy-check"
+                      width="16"
+                      height="16"
+                    >
                       <use href="./images/icons.svg#icon-check"></use>
                     </svg>
                   </span>
@@ -165,7 +241,12 @@
                 </label>
               </div>
 
-              <button class="button modal-form__button button--curiousblue-color" type="submit">Відправити</button>
+              <button
+                class="button modal-form__button button--curiousblue-color"
+                type="submit"
+              >
+                Відправити
+              </button>
             </form>
           </div>
         </div>
@@ -175,7 +256,9 @@
 
       <section class="section">
         <div class="container">
-          <h2 class="section__title visually-hidden">Особливості організації</h2>
+          <h2 class="section__title visually-hidden">
+            Особливості організації
+          </h2>
 
           <ul class="qualities-list">
             <li class="qualities-list__item">
@@ -237,34 +320,72 @@
 
           <ul class="profile">
             <li class="profile__item">
-              <img
-                class="image"
-                src="./images/img_1.jpg"
-                alt="Десктопні додатки"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/img_1.webp 1x, ./images/img_1@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/img_1.jpg 1x, ./images/img_1@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+
+                <img
+                  class="image"
+                  src=""
+                  alt="Десктопні додатки"
+                  width="370"
+                />
+              </picture>
               <div class="profile__background-text">
                 <p class="profile__text">Десктопні додатки</p>
               </div>
             </li>
             <li class="profile__item">
-              <img
-                class="image"
-                src="./images/img_2.jpg"
-                alt="Мобільні додатки"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/img_2.webp 1x, ./images/img_2@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/img_2.jpg 1x, ./images/img_2@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+
+                <img
+                  class="image"
+                  src=""
+                  alt="Мобільні додатки"
+                  width="370"
+                />
+              </picture>
               <div class="profile__background-text">
                 <p class="profile__text">Мобільні додатки</p>
               </div>
             </li>
             <li class="profile__item">
-              <img
-                class="image"
-                src="./images/img_3.jpg"
-                alt="Дизайнерські рішення"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/img_3.webp 1x, ./images/img_3@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/img_3.jpg 1x, ./images/img_3@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="image"
+                  src=""
+                  alt="Дизайнерські рішення"
+                  width="370"
+                />
+              </picture>
               <div class="profile__background-text">
                 <p class="profile__text">Десктопні додатки</p>
               </div>
@@ -281,12 +402,46 @@
 
           <ul class="team-list">
             <li class="team-list__item">
-              <img
-                class="image"
-                src="./images/fotoPorductDesinger.jpg"
-                alt="Фото Ігора Дем'яненко"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/fotoPorductDesinger-desktop.webp 1x, ./images/fotoPorductDesinger-desktop@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/fotoPorductDesinger-desktop.jpg 1x, ./images/fotoPorductDesinger-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="./images/fotoPorductDesinger-tablet.webp 1x, ./images/fotoPorductDesinger-tablet@2x.webp 2x"
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/fotoPorductDesinger-tablet.jpg 1x, ./images/fotoPorductDesinger-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="./images/fotoPorductDesinger-mobile.webp 1x, ./images/fotoPorductDesinger-mobile@2x.webp 2x"
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/fotoPorductDesinger-mobile.jpg 1x, ./images/fotoPorductDesinger-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="image"
+                  src="./images/fotoPorductDesinger-mobile.jpg"
+                  alt="Фото Ігора Дем'яненко"
+                />
+              </picture>
+
               <div class="team-list__item-body">
                 <h3 class="team-list__title">Ігор Дем'яненко</h3>
                 <p class="team-list__text" lang="en">Product Designer</p>
@@ -323,12 +478,46 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                class="image"
-                src="./images/fotoFrontendDeveloper.jpg"
-                alt="Фото Ольгі Рєпіна"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/fotoFrontendDeveloper-desktop.webp 1x, ./images/fotoFrontendDeveloper-desktop@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/fotoFrontendDeveloper-desktop.jpg 1x, ./images/fotoFrontendDeveloper-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="./images/fotoFrontendDeveloper-tablet.webp 1x, ./images/fotoFrontendDeveloper-tablet@2x.webp 2x"
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/fotoFrontendDeveloper-tablet.jpg 1x, ./images/fotoFrontendDeveloper-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="./images/fotoFrontendDeveloper-mobile.webp 1x, ./images/fotoFrontendDeveloper-mobile@2x.webp 2x"
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/fotoFrontendDeveloper-mobile.jpg 1x, ./images/fotoFrontendDeveloper-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="image"
+                  src="./images/fotoFrontendDeveloper-mobile.jpg"
+                  alt="Фото Ольгі Рєпіна"
+                />
+              </picture>
+
               <div class="team-list__item-body">
                 <h3 class="team-list__title">Ольга Рєпіна</h3>
                 <p class="team-list__text" lang="en">Frontend Developer</p>
@@ -365,12 +554,46 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                class="image"
-                src="./images/fotoMarketing.jpg"
-                alt="Фото Миколи Тарасова"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/fotoMarketing-desktop.webp 1x, ./images/fotoMarketing-desktop@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/fotoMarketing-desktop.jpg 1x, ./images/fotoMarketing-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="./images/fotoMarketing-tablet.webp 1x, ./images/fotoMarketing-tablet@2x.webp 2x"
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/fotoMarketing-tablet.jpg 1x, ./images/fotoMarketing-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="./images/fotoMarketing-mobile.webp 1x, ./images/fotoMarketing-mobile@2x.webp 2x"
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/fotoMarketing-mobile.jpg 1x, ./images/fotoMarketing-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                  <img
+                    class="image"
+                    src="./images/fotoMarketing.jpg"
+                    alt="Фото Миколи Тарасова"
+                  />
+              </picture>
+
               <div class="team-list__item-body">
                 <h3 class="team-list__title">Микола Тарасов</h3>
                 <p class="team-list__text" lang="en">Marketing</p>
@@ -407,12 +630,46 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                class="image"
-                src="./images/fotoUIDesigner.jpg"
-                alt="Фото Михайло Єрмакова"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/fotoUIDesigner-desktop.webp 1x, ./images/fotoUIDesigner-desktop@2x.webp 2x"
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/fotoUIDesigner-desktop.jpg 1x, ./images/fotoUIDesigner-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="./images/fotoUIDesigner-tablet.webp 1x, ./images/fotoUIDesigner-tablet@2x.webp 2x"
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/fotoUIDesigner-tablet.jpg 1x, ./images/fotoUIDesigner-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+
+                <source
+                  srcset="./images/fotoUIDesigner-mobile.webp 1x, ./images/fotoUIDesigner-mobile@2x.webp 2x"
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="./images/fotoUIDesigner-mobile.jpg 1x, ./images/fotoUIDesigner-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                  <img
+                    class="image"
+                    src="./images/fotoUIDesigner.jpg"
+                    alt="Фото Михайло Єрмакова"
+                  />
+              </picture>
+
               <div class="team-list__item-body">
                 <h3 class="team-list__title">Михайло Єрмаков</h3>
                 <p class="team-list__text" lang="en">UI Designer</p>
@@ -515,7 +772,7 @@
 
     <footer class="footer">
       <div class="container container--footer-flex">
-        <div>
+        <div class="wrapper-logo-address">
           <a href="./index.html" class="logo footer__logo"
             >Web<span class="logo__item logo__item--color-white">Studio</span></a
           >
@@ -536,7 +793,7 @@
         </div>
         <div class="footer__social-media">
           <b class="footer__text">приєднуйтесь</b>
-          <ul class="socials">
+          <ul class="socials socials--align-left">
             <li class="socials__item">
               <a href="" class="socials__link">
                 <svg class="socials__icon" width="20" height="20">
@@ -544,7 +801,7 @@
                 </svg>
               </a>
             </li>
-            <li class="socials__item">
+            <li class="socials__item ">
               <a href="" class="socials__link">
                 <svg class="socials__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-twitter"></use>
@@ -588,6 +845,7 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

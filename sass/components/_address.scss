@@ -1,19 +1,20 @@
 .address {
+    
     color: var(--primary-white-color);
-    min-width: 231px;
   
     font-style: inherit;
+    line-height: 1.14; 
 }
 
 .address__contact {
     @extend %list;
-    margin-top: 9px;
+    margin-top: 12px;
 }
 
 .address__contact-item {
 
     &:first-child {
-      margin-bottom: 9px;
+      margin-bottom: 12px;
     }
 }
 
