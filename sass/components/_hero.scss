@@ -8,7 +8,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../../images/banner-mobile.jpg);
+      url(../images/banner-mobile.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -23,7 +23,7 @@
          to right,
          rgba(47, 48, 58, 0.4),
          rgba(47, 48, 58, 0.4)
-         ), url(../../images/banner-mobile@2x.jpg)
+         ), url(../images/banner-mobile@2x.jpg)
     }
 
 }
@@ -60,7 +60,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
         ),
-         url(../../images/banner-tablet.jpg);
+         url(../images/banner-tablet.jpg);
       
       @media screen and (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
@@ -69,7 +69,7 @@
             to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)
-            ), url(../../images/banner-tablet@2x.jpg)
+            ), url(../images/banner-tablet@2x.jpg)
         }
     }
 }
@@ -83,7 +83,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
         ),
-         url(../../images/banner-desktop.jpg);
+         url(../images/banner-desktop.jpg);
 
       @media screen and (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
@@ -92,7 +92,7 @@
             to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)
-            ), url(../../images/banner-desktop@2x.jpg)
+            ), url(../images/banner-desktop@2x.jpg)
         }
     }
 
