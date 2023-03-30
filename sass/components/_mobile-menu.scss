@@ -77,6 +77,10 @@
         @include link();
 
         color: var(--title-text-color);
+
+        &--current {
+            color: var(--accent-color);
+        }
     }
 
     .mobile-menu__contact{

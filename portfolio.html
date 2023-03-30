@@ -23,20 +23,32 @@
     <header class="header">
       <div class="container container--header-flex">
         <nav class="navigation">
-          <a href="./index.html" class="logo"
+          <a href="./index.html" class="logo header__logo"
             >Web<span class="logo__item">Studio</span></a
           >
 
           <ul class="nav-list">
             <li class="nav-list__item">
-              <a href="./index.html" class="nav-list__link">Студія</a>
+              <a
+                href="./index.html"
+                class="nav-list__link"
+                >Студія</a
+              >
             </li>
             <li class="nav-list__item">
               <a href="./portfolio.html" class="nav-list__link nav-list__link--current">Портфоліо</a>
             </li>
-            <li class="nav-list__item"><a href="" class="nav-list__link">Контакти</a></li>
+            <li class="nav-list__item">
+              <a href="" class="nav-list__link">Контакти</a>
+            </li>
           </ul>
         </nav>
+
+        <button type="button" class="mobile-button" data-menu-open>
+          <svg class="mobile-button__icon" width="40" height="40">
+            <use href="./images/icons.svg#burger-menu-icon"></use>
+          </svg>
+        </button>
 
         <ul class="header__contact">
           <li class="header__contact-item">
@@ -59,8 +71,64 @@
           </li>
         </ul>
       </div>
-    </header>
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu__container">
+          <button
+            type="button"
+            class="mobile-button mobile-menu__mobile-button-close"
+            data-menu-close
+          >
+            <svg class="mobile-menu__close-icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-close-mobile"></use>
+            </svg>
+          </button>
 
+          <ul class="mobile-menu__nav">
+            <li class="mobile-menu__nav-item">
+              <a class="mobile-menu__nav-link" href="./index.html">Студія</a>
+            </li>
+            <li class="mobile-menu__nav-item">
+              <a class="mobile-menu__nav-link mobile-menu__nav-link--current" href="./portfolio.html"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="mobile-menu__nav-item">
+              <a class="mobile-menu__nav-link" href="">Контакти</a>
+            </li>
+          </ul>
+
+          <ul class="mobile-menu__contact">
+            <li class="mobile-menu__contact-item">
+              <a class="mobile-menu__contact-link" href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-menu__contact-item">
+              <a
+                class="mobile-menu__contact-link"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="mobile-menu__socials">
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="">Instagram</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="">Twitter</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="">Facebook</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <!--  Портфоліо  -->
 
     <main>
@@ -70,23 +138,34 @@
 
           <!-- Фільтр -->
 
-          <ul class="filter  filter--indent">
+          <ul class="filter filter--indent">
             <li class="filter__item">
-              <button type="button" class="button filter__button filter__button--current">
+              <button
+                type="button"
+                class="button filter__button filter__button--current"
+              >
                 Усі
               </button>
             </li>
             <li class="filter__item">
-              <button type="button" class="button filter__button">Веб-сайти</button>
+              <button type="button" class="button filter__button">
+                Веб-сайти
+              </button>
             </li>
             <li class="filter__item">
-              <button type="button" class="button filter__button">Додатки</button>
+              <button type="button" class="button filter__button">
+                Додатки
+              </button>
             </li>
             <li class="filter__item">
-              <button type="button" class="button filter__button">Дизайн</button>
+              <button type="button" class="button filter__button">
+                Дизайн
+              </button>
             </li>
             <li class="filter__item">
-              <button type="button" class="button filter__button">Маркетинг</button>
+              <button type="button" class="button filter__button">
+                Маркетинг
+              </button>
             </li>
           </ul>
 
@@ -96,12 +175,46 @@
             <li class="works-list__item">
               <a class="works-link" href="">
                 <div class="works-link__wrapper">
-                  <img
-                    src="./images/technocrack.jpg"
-                    class="image"
-                    alt="Технокряк"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/technocrack-desktop.webp 1x, ./images/technocrack-desktop@2x.webp 2x"
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/technocrack-desktop.jpg 1x, ./images/technocrack-desktop@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+    
+                    <source
+                      srcset="./images/technocrack-tablet.webp 1x, ./images/technocrack-tablet@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/technocrack-tablet.jpg 1x, ./images/technocrack-tablet@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+    
+                    <source
+                      srcset="./images/technocrack-mobile.webp 1x, ./images/technocrack-mobile@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/technocrack-mobile.jpg 1x, ./images/technocrack-mobile@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/technocrack-mobile.jpg"
+                      class="image"
+                      alt="Технокряк"
+                    />
+                  </picture>
+    
                   <div class="works-overlay">
                     <div class="works-overlay__wrapper-text">
                       <p class="works-overlay__text">
@@ -113,7 +226,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="works-link__body">
+                <div class="works-link__body works-link__body--padding">
                   <h2 class="works-link__title">Технокряк</h2>
                   <p class="works-link__text">Веб-сайт</p>
                 </div>
@@ -122,12 +235,45 @@
             <li class="works-list__item">
               <a class="works-link" href="">
                 <div class="works-link__wrapper">
-                  <img
-                    src="./images/basketball.jpg"
-                    class="image"
-                    alt="Постер Нью-Орлеан проти Голден Стар"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/basketball-desktop.webp 1x, ./images/basketball-desktop@2x.webp 2x"
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/basketball-desktop.jpg 1x, ./images/basketball-desktop@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+    
+                    <source
+                      srcset="./images/basketball-tablet.webp 1x, ./images/basketball-tablet@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/basketball-tablet.jpg 1x, ./images/basketball-tablet@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+    
+                    <source
+                      srcset="./images/basketball-mobile.webp 1x, ./images/basketball-mobile@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/basketball-mobile.jpg 1x, ./images/basketball-mobile@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/basketball-mobile.jpg"
+                      class="image"
+                      alt="Постер Нью-Орлеан проти Голден Стар"
+                    />
+                  </picture>
                   <div class="works-overlay">
                     <div class="works-overlay__wrapper-text">
                       <p class="works-overlay__text">
@@ -140,7 +286,9 @@
                   </div>
                 </div>
                 <div class="works-link__body">
-                  <h2 class="works-link__title">Постер New Orlean vs Golden Star</h2>
+                  <h2 class="works-link__title">
+                    Постер New Orlean vs Golden Star
+                  </h2>
                   <p class="works-link__text">Дизайн</p>
                 </div>
               </a>
@@ -148,12 +296,46 @@
             <li class="works-list__item">
               <a class="works-link" href="">
                 <div class="works-link__wrapper">
-                  <img
-                    src="./images/seafood.jpg"
-                    class="image"
-                    alt="Ресторан морської їжі"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/seafood-desktop.webp 1x, ./images/seafood-desktop@2x.webp 2x"
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/seafood-desktop.jpg 1x, ./images/seafood-desktop@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+    
+                    <source
+                      srcset="./images/seafood-tablet.webp 1x, ./images/seafood-tablet@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/seafood-tablet.jpg 1x, ./images/seafood-tablet@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+    
+                    <source
+                      srcset="./images/seafood-mobile.webp 1x, ./images/seafood-mobile@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/seafood-mobile.jpg 1x, ./images/seafood-mobile@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/seafood-mobile.jpg"
+                      class="image"
+                      alt="Ресторан морської їжі"
+                    />
+                  </picture>
+
                   <div class="works-overlay">
                     <div class="works-overlay__wrapper-text">
                       <p class="works-overlay__text">
@@ -174,12 +356,46 @@
             <li class="works-list__item">
               <a class="works-link" href="">
                 <div class="works-link__wrapper">
-                  <img
-                    src="./images/prime.jpg"
-                    class="image"
-                    alt="Проєкт Прайм"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/prime-desktop.webp 1x, ./images/prime-desktop@2x.webp 2x"
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/prime-desktop.jpg 1x, ./images/prime-desktop@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+    
+                    <source
+                      srcset="./images/prime-tablet.webp 1x, ./images/prime-tablet@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/prime-tablet.jpg 1x, ./images/prime-tablet@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+    
+                    <source
+                      srcset="./images/prime-mobile.webp 1x, ./images/prime-mobile@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/prime-mobile.jpg 1x, ./images/prime-mobile@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/prime-mobile.jpg"
+                      class="image"
+                      alt="Проєкт Прайм"
+                    />
+                  </picture>
+
                   <div class="works-overlay">
                     <div class="works-overlay__wrapper-text">
                       <p class="works-overlay__text">
@@ -200,12 +416,46 @@
             <li class="works-list__item">
               <a class="works-link" href="">
                 <div class="works-link__wrapper">
-                  <img
-                    src="./images/boxes.jpg"
-                    class="image"
-                    alt="Проєкт Коробки"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/boxes-desktop.webp 1x, ./images/boxes-desktop@2x.webp 2x"
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/boxes-desktop.jpg 1x, ./images/boxes-desktop@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+    
+                    <source
+                      srcset="./images/boxes-tablet.webp 1x, ./images/boxes-tablet@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/boxes-tablet.jpg 1x, ./images/boxes-tablet@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+    
+                    <source
+                      srcset="./images/boxes-mobile.webp 1x, ./images/boxes-mobile@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/boxes-mobile.jpg 1x, ./images/boxes-mobile@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/boxes-mobile.jpg"
+                      class="image"
+                      alt="Проєкт Коробки"
+                    />
+                  </picture>
+
                   <div class="works-overlay">
                     <div class="works-overlay__wrapper-text">
                       <p class="works-overlay__text">
@@ -226,12 +476,46 @@
             <li class="works-list__item">
               <a class="works-link" href="">
                 <div class="works-link__wrapper">
-                  <img
-                    class="image"
-                    src="./images/inspiration.jpg"
-                    alt="Натхнення не має кордонів"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/inspiration-desktop.webp 1x, ./images/inspiration-desktop@2x.webp 2x"
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/inspiration-desktop.jpg 1x, ./images/inspiration-desktop@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+    
+                    <source
+                      srcset="./images/inspiration-tablet.webp 1x, ./images/inspiration-tablet@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/inspiration-tablet.jpg 1x, ./images/inspiration-tablet@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+    
+                    <source
+                      srcset="./images/inspiration-mobile.webp 1x, ./images/inspiration-mobile@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/inspiration-mobile.jpg 1x, ./images/inspiration-mobile@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="image"
+                      src="./images/inspiration-mobile.jpg"
+                      alt="Натхнення не має кордонів"
+                    />
+                  </picture>
+
                   <div class="works-overlay">
                     <div class="works-overlay__wrapper-text">
                       <p class="works-overlay__text">
@@ -244,7 +528,9 @@
                   </div>
                 </div>
                 <div class="works-link__body">
-                  <h2 class="works-link__title" lang="en">Inspiration has no Borders</h2>
+                  <h2 class="works-link__title" lang="en">
+                    Inspiration has no Borders
+                  </h2>
                   <p class="works-link__text">Веб-сайт</p>
                 </div>
               </a>
@@ -252,12 +538,45 @@
             <li class="works-list__item">
               <a class="works-link" href="">
                 <div class="works-link__wrapper">
-                  <img
-                    class="image"
-                    src="./images/edition.jpg"
-                    alt="Обмежене видання"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/edition-desktop.webp 1x, ./images/edition-desktop@2x.webp 2x"
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/edition-desktop.jpg 1x, ./images/edition-desktop@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+    
+                    <source
+                      srcset="./images/edition-tablet.webp 1x, ./images/edition-tablet@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/edition-tablet.jpg 1x, ./images/edition-tablet@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+    
+                    <source
+                      srcset="./images/edition-mobile.webp 1x, ./images/edition-mobile@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/edition-mobile.jpg 1x, ./images/edition-mobile@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="image"
+                      src="./images/edition-mobile.jpg"
+                      alt="Обмежене видання"
+                    />
+                  </picture>
                   <div class="works-overlay">
                     <div class="works-overlay__wrapper-text">
                       <p class="works-overlay__text">
@@ -278,12 +597,45 @@
             <li class="works-list__item">
               <a class="works-link" href="">
                 <div class="works-link__wrapper">
-                  <img
-                    src="./images/lab.jpg"
-                    class="image"
-                    alt="Проєкт Лаб"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/lab-desktop.webp 1x, ./images/lab-desktop@2x.webp 2x"
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/lab-desktop.jpg 1x, ./images/lab-desktop@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+    
+                    <source
+                      srcset="./images/lab-tablet.webp 1x, ./images/lab-tablet@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/lab-tablet.jpg 1x, ./images/lab-tablet@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+    
+                    <source
+                      srcset="./images/lab-mobile.webp 1x, ./images/lab-mobile@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/lab-mobile.jpg 1x, ./images/lab-mobile@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="./images/lab-mobile.jpg"
+                      class="image"
+                      alt="Проєкт Лаб"
+                    />
+                  </picture>
                   <div class="works-overlay">
                     <div class="works-overlay__wrapper-text">
                       <p class="works-overlay__text">
@@ -304,12 +656,45 @@
             <li class="works-list__item">
               <a class="works-link" href="">
                 <div class="works-link__wrapper">
-                  <img
-                    class="image"
-                    src="./images/business.jpg"
-                    alt="Зростаючий бізнес"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/business-desktop.webp 1x, ./images/business-desktop@2x.webp 2x"
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/business-desktop.jpg 1x, ./images/business-desktop@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+    
+                    <source
+                      srcset="./images/business-tablet.webp 1x, ./images/business-tablet@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/business-tablet.jpg 1x, ./images/business-tablet@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+    
+                    <source
+                      srcset="./images/business-mobile.webp 1x, ./images/business-mobile@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/business-mobile.jpg 1x, ./images/business-mobile@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="image"
+                      src="./images/business-mobile.jpg"
+                      alt="Зростаючий бізнес"
+                    />
+                  </picture>
                   <div class="works-overlay">
                     <div class="works-overlay__wrapper-text">
                       <p class="works-overlay__text">
@@ -336,28 +721,34 @@
 
     <footer class="footer">
       <div class="container container--footer-flex">
-        <div>
+        <div class="wrapper-logo-address">
           <a href="./index.html" class="logo footer__logo"
-            >Web<span class="logo__item logo__item--color-white">Studio</span></a
+            >Web<span class="logo__item logo__item--color-white"
+              >Studio</span
+            ></a
           >
 
           <address class="address">
             м. Київ, пр-т Лесі Українки, 26
             <ul class="address__contact">
               <li class="address__contact-item">
-                <a href="mailto:info@devstudio.com" class="address__contact-link"
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="address__contact-link"
                   >info@devstudio.com</a
                 >
               </li>
               <li class="address__contact-item">
-                <a href="tel:+380961111111" class="address__contact-link">+38 096 111 11 11</a>
+                <a href="tel:+380961111111" class="address__contact-link"
+                  >+38 096 111 11 11</a
+                >
               </li>
             </ul>
           </address>
         </div>
         <div class="footer__social-media">
           <b class="footer__text">приєднуйтесь</b>
-          <ul class="socials">
+          <ul class="socials socials--align-left">
             <li class="socials__item">
               <a href="" class="socials__link">
                 <svg class="socials__icon" width="20" height="20">
@@ -387,7 +778,6 @@
               </a>
             </li>
           </ul>
-          
         </div>
         <div class="footer__mailing">
           <b class="footer__text">Підпишіться на розсилку</b>
@@ -399,7 +789,10 @@
               autocomplete="off"
               placeholder="E-mail"
             />
-            <button class="button form__button button--curiousblue-color" type="submit">
+            <button
+              class="button form__button button--curiousblue-color"
+              type="submit"
+            >
               Підписатися
               <svg class="button__icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-send"></use>
@@ -409,5 +802,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

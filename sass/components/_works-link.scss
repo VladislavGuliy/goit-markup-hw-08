@@ -33,6 +33,13 @@
     padding-left: 24px;
     padding-right: 24px;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .works-link__body {
+        &--padding {
+            padding-bottom: 56px;
+        }
+    }
+}
 .works-link__text {
     margin-top: 0;
     margin-bottom: 0;
