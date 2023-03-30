@@ -113,9 +113,7 @@
 }
 
 .modal-form__checkbox-label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include centred-flex();  
 
     cursor: pointer;
 }

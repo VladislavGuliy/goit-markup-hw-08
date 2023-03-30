@@ -30,3 +30,10 @@
     align-items: $align;
     justify-content: $content;
 }
+
+@mixin wrap-flex ($type: flex, $wrap: wrap, $direction: row, $align: stretch) {
+    display: $type;
+    flex-wrap: $wrap;
+    align-items: $align;
+    flex-direction: $direction;
+}

@@ -15,27 +15,24 @@
 }
 
 @media screen and (min-width: 768px) {
-    
     .header__contact {
         @include font(block);
         @include list();
-        }
+    }
     
     .header__contact-icon-wrapper {
         vertical-align: text-bottom;
         margin-right: 8px;
         font-size: 0;
-        }
+    }
     .header__contact-icon {
         @include color-icon(currentColor);
-        }
+    }
     .header__contact-link {
         @include link();
   
         color: var(--primary-text-color);
     }
-
-    
 }
 
 @media screen and (max-width: 1199px) {
@@ -53,32 +50,3 @@
         margin-left: 40px;
     }
 }
-
-// .header__logo {
-//     padding: 16px 0;
-// }
-// .header__contact {
-//     @extend %list;
-//     @extend %font;
-//     // display: none;
-// }
-// .header__contact-item:last-child {
-//     margin-left: 40px;
-// }
-// .header__contact-icon-wrapper {
-//     vertical-align: text-bottom;
-//     margin-right: 10px;
-//     font-size: 0;
-// }
-// .header__contact-icon {
-//     @include color-icon(currentColor);
-// }
-// .header__contact-link {
-//     @extend %link;
-    
-//     padding-top: 32px;
-//     padding-bottom: 32px;
-  
-//     color: var(--primary-text-color);
-// }
-  

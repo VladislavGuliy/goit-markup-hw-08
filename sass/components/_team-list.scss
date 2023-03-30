@@ -1,5 +1,5 @@
 .team-list {
-    @extend %list;
+    @include list();
 }
 .team-list__item {
     background-color: var(--primary-white-color);
@@ -44,8 +44,7 @@
 
 @media screen and (min-width: 768px) {
     .team-list {
-        display: flex;
-        flex-wrap: wrap;
+        @include wrap-flex();
         margin: -15px;
     }
     .team-list__item {

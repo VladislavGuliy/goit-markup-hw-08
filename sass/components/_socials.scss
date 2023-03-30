@@ -1,6 +1,6 @@
 .socials {
     @include centred-flex();
-    @extend %list;
+    @include list();
     line-height: 0;
     
     &--align-left {

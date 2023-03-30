@@ -1,7 +1,7 @@
 /*  Кнопка  */
 
 .button {
-    @include centred-flex(inline-flex);
+    @include centred-flex($type: inline-flex);
 
     min-width: 200px;
 

@@ -7,7 +7,7 @@
 }
 
 .address__contact {
-    @extend %list;
+    @include list();
     margin-top: 12px;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .address__contact-link {
-    @extend %link;
+    @include link();
 
     color: var(--transparent-white-color);
 }
