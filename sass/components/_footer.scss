@@ -2,9 +2,7 @@
     background-color: var(--secondary-background-color);
     padding-top: 60px;
     padding-bottom: 60px;
-    max-width: 480px;
-    margin: 0 auto;
-    }
+}
 
 .footer__logo {
     display: inline-block;
@@ -51,16 +49,8 @@
   
     color: var(--primary-white-color);
 }
-@media screen and (min-width:768px) {
-    .footer {
-        max-width: 768px;
-        }
-} 
 
 @media screen and (min-width:1200px) {
-    .footer {
-        max-width: 1600px;
-    }
     .footer__text {
         text-align: left;
     }

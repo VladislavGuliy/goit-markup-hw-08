@@ -1,10 +1,17 @@
+.modal-body {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+}
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    position: relative;
 
-    min-width: 450px;
+    transform: scale(1);
+
+    max-width: 450px;
+    width: 100%;
     padding: 40px;
 
     background-color: var(--primary-white-color);
@@ -16,7 +23,7 @@
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     .backdrop--is-hidden & {
-      transform: translate(-50%, -50%) scale(1.1);
+      transform: scale(1.1);
     }
 }
   
@@ -48,14 +55,9 @@
       @include color-icon(var(--accent-color)) ;
     }
 }
-@media screen and (max-width: 479px) {
-  .modal {
-    min-width: 95%;
-  }
-}
 @media screen and (min-width: 1200px) {
   .modal {
-    min-width: 528px;
+    max-width: 528px;
   }
 }
 

@@ -7,8 +7,6 @@
     }
 
     &--team-bg {
-        max-width: 480px;
-        margin: 0 auto;
         background-color: var(--third-background-color);
     }
 }
@@ -25,13 +23,6 @@
 
     text-align: center;
 }
-@media screen and (min-width: 768px) {
-    .section {
-        &--team-bg {
-            max-width: 768px;
-        }
-    }
-}
 
 @media  screen and (min-width: 1200px) {
     .section {
@@ -41,9 +32,6 @@
         &--indent {
             display: block;
             padding-top: 0;
-        }
-        &--team-bg {
-            max-width: 1600px;
         }
     }
     .section__title {

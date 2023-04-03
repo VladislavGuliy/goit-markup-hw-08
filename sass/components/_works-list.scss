@@ -13,10 +13,14 @@
   .works-list {
     @include wrap-flex();
     margin: -15px;
+    
   }
   .works-list__item {
+    display: flex;
     width: calc((100% - 2*30px)/2);
     margin: 15px;
+
+    
   }
 }
 @media screen and (min-width: 1200px) {

@@ -1,7 +1,7 @@
 
 @media  screen and (max-width: 767px) {
     .mobile-menu {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
     
@@ -53,7 +53,7 @@
         padding-left: 40px;
 
         @media screen and (max-width: 479px) {
-            padding-left: 15px;
+            padding-left: 30px;
         }
     }
     
@@ -69,10 +69,21 @@
 
         font-size: 40px;
         line-height: 1.18;
+
+        @media screen and (max-width: 479px) {
+            margin-bottom: 230px;
+
+            font-size: 32px;
+        }
     }
     .mobile-menu__nav-item:not(:last-child) {
         margin-bottom: 32px;
+        @media screen and (max-width: 479px) {
+            margin-bottom: 24px;
+        }
     }
+
+
     .mobile-menu__nav-link {
         @include link();
 
@@ -89,22 +100,27 @@
         color: var(--primary-text-color);
         font-size: 24px;
         line-height: 1.17;
-
-
+        @media screen and (max-width: 479px) {
+            margin-bottom: 40px;
+            font-size: 20px;
+        }
 
     }
     .mobile-menu__contact-item:first-child {
         margin-bottom: 32px;
-            }
+        font-size: 34px;
+        line-height: 1.18;
+
+        @media screen and (max-width: 479px) {
+            margin-bottom: 24px;
+            font-size: 30px;
+        }
+        
+    }
     .mobile-menu__contact-link {
-        color: var(--primary-text-color);
+        color: inherit;
         @include link();
 
-        &:hover,
-        &:focus {
-            font-size: 34px;
-            line-height: 1.18;
-        }
     }
 
     .mobile-menu__socials {
@@ -115,6 +131,7 @@
         line-height: 1.22;
 
         @media screen and (max-width: 479px) {
+            font-size: 14px;
             flex-wrap: wrap;
         }
     }
@@ -126,15 +143,12 @@
             margin-right: 10px;
             
             border-right: 1px solid rgba(33, 33, 33, 0.2);
-
-            
             @media screen and (max-width: 479px) {
+                padding-right: 6px;
+                margin-right: 6px;
                 margin-bottom: 10px;
             }
         }
-
-        
-        
     }
     .mobile-menu__socials-link {
         @include link();
